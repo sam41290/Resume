@@ -1,0 +1,165 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=10mm,
+ bottom=5mm,
+ }
+
+\title{Soumyakant_Resume}
+\author{Soumyakant Priyadarshan}
+\date{September 2017}
+
+
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{2pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+    % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+
+
+%==== Profile ====%
+\begin{center}
+	{\Huge \scshape {Soumyakant Priyadarshan}}\\
+    Stony Brook,NY $\cdot$ soumyakant.priyadarshan@stonybrook.edu $\cdot$
+    (631)636-6925 $\cdot$
+    https://www.linkedin.com/in/soumyakant-priyadarshan-1ab87464/\\
+\end{center}
+
+
+%==== Education ====%
+\header{Education}
+\textbf{Stony Brook University}\hfill Stony Brook,NY\\
+PhD candidate, Computer Science \textit{GPA: 3.8/4} \hfill Grad: Dec 23\\
+\newline 
+Courses: Operating Systems, Artificial Intelligence, Network Programming,
+Wireless Networks,System Security, Database Systems, Human Computer
+Interaction\\
+
+\textbf{National Institute of Technology}\hfill Rourkela,Odisha,India\\
+B. Tech., Computer Science and Engineering \textit{GPA: 7.98/10} \hfill Grad: Jun 13\newline \newline
+%==== Skills ====%
+\header{SKILLS}
+\begin{itemize}
+  \itemsep0em
+    \item \textbf{Programming Languages}: C, C++, Python, Bash shell scripting,
+     SQL/PLSQL, Javascript,JAVA.
+	\item \textbf{Databases}: Oracle, MySQL
+	\item \textbf{Operating Systems}: Unix, Linux
+    \item \textbf{Domain Expertise}: Operating systems, Networking, Systems
+    security, Binary instrumentation, Binary analysis, Databases.
+\end{itemize}
+%==== Experience ====%
+\header{RESEARCH WORK}
+\begin{itemize}
+\itemsep0em  
+  \item \textbf{Area of interest:} System security, Binary instrumentation,
+    Binary analysis, Code reuse attacks, Return oriented programming (ROP), Code
+    randomization. 
+  \item \textbf{Stony Brook Binary Randomizer (SBR):} SBR is an open-source code
+    randomization tool designed to protect stripped COTS binaries against
+    \textbf{code reuse attacks}. The primary motivation behind developing SBR is
+    to create a deployable code randomization system with minimal performance
+    overhead and good security against indirect disclosure based ROP attacks.
+    SBR works well with executables as well as shared libraries and has been
+    extensively tested against wide range of applications (600 MB of binary
+    code) and low level libraries such as glibc, ld.so and libpthread.so. The
+    robustness of SBR makes it an ideal candidate to randomize and protect an
+    application's entire code space. Unlike recent works that heavily rely on
+    relocation information and limit themselves only to position independent
+    executables (PIEs), SBR can randomize both modern PIE binaries as well as
+    non-PIE binaries. The disassembly and instrumentation technique employed by
+    SBR has proven to work with binaries having data embedded in code.
+
+    \textbf{Link:} http://seclab.cs.sunysb.edu/seclab/sbr/
+
+  \item \textbf{A platform for Secure Binary instrumentation-[C/C++]} which
+    overcomes the drawbacks Dynamic Binary Instrumentation technique, while
+    retaining the security, robustness and ease-of-use features. Current work
+    focuses on 64-bit instruction set.
+\end{itemize}
+
+\header{WORK EXPERIENCE}
+
+\textbf{Amdocs Development Center} \hfill Gurgaon,India\\
+\textit{Software Engineer} \hfill July 2013 | July 2017\\
+\begin{itemize}
+\itemsep0em 
+  \item Worked in the Data Migration team as End to End Data migration solution designer and developer for telecom BSS systems.
+  \item Developed ETL(Extract-Transform-Load) software for telecom billing systems' data migration projects in TRUE-Move(2013-2014), TRUE-Vision and TRUE-Online(2015-2017), NET-Brazil(2014-2015)
+  \item Contributed to the development of Data Assurance Tool used for data analysis and quality checking.
+\end{itemize}
+\header{COURSE PROJECTS:}
+\begin{itemize}
+\itemsep0em 
+	\item \textbf{Operating system for x86 architecture(64 bit)-[C]}. Features include working Shell, timer interrupt(using PIT) and keyboard interrupt, walking through PCI to detect AHCI, Paging, Virtual memory, TARFS, syscalls(fork, execvpe, wait, waitpid, read, write(stdout),open, close, malloc,free, sleep, kill),COW(copy on write) and running binaries(ps,cat,ls,kill,cd).\\
+    \item \textbf{AI}: \textbf{Decision Tree-[Python]} for mining click-stream data collected from Gazelle.com to predict page viewing of a visitor, given a set of page views.\\
+    \item \textbf{Network Programming-[C]}: \textbf{Trace-route program} along with the \textbf{ARP module} to walk around a given ordered list of nodes.\\
+    \item \textbf{Network Programming-[C]}: \textbf{file transfer application} using UDP and added reliability and congestion control using acknowledgements and sliding window on top of UDP.\\
+    \item \textbf{Android App} to detect device orientation, chop and shake gesture using accelerometer.\\
+    \item \textbf{System security-[C/C++, javascript]}: Stack Smashing, buffer overflow, heap overflow and format string exploits. SQL injection, XSS-attack and CSRF attack, system call and library function hooking using strace and ptrace. PIN based instrumentation tools.
+\end{itemize}
+
+
+\end{document}
+
+
