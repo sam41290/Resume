@@ -1,0 +1,14 @@
+We are working on developing a deployable binary transformation tools that can
+transform/instrument binary executables with relying on source code. Such
+a binary transformation tool has a wide range of application such as binary
+hardening, optimization, debugging etc. Ensuring deployability  of such a tool
+involves ensuring
+
+    i) low performance overhead.
+   ii) Correct transformation (No change in behaviour of transformed program)
+  iii) Compatibility with C++ exception handling functionality
+   iv) Secure transformation (We execute what we instrument)
+
+As a part of our research, we have developed SBR, a binary randomization tool
+meant to harden executables against code reuse attacks using code randomization.
+This work was published in ACSAC 2020.
